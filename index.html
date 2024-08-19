@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hero travel assignment</title>
+    <style>
+        body {
+            margin: 1% 5% 5% 5%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* this is nav section */
+
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .web-name {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-left: 1rem;
+        }
+
+        .global {
+            color: orangered;
+        }
+
+        /* right nav section */
+        .n-right ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .n-right a {
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+            font-weight: 400;
+        }
+
+        .n-right a:hover {
+            background-color: orangered;
+            border-radius: 5px;
+        }
+
+
+        /* this is start container section */
+
+        .start-container {
+            height: 70vh;
+            width: 100%;
+            background-image: url(start-image.png);
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .s-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5%;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .s-bio {
+            margin: 0% 10% 0% 10%;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .s-input {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 2.8rem;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+
+        .s-input input,
+        .input {
+            width: 6rem;
+            height: 70%;
+        }
+
+        .s-input input {
+            border: none;
+            border-radius: 5px;
+        }
+
+        .input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orangered;
+            border-radius: 5px;
+            color: antiquewhite;
+        }
+
+        /* this is bio container section style sheet */
+        .bio-container {
+            display: flex;
+            margin-top: 4rem;
+        }
+
+        .bio-text {
+            margin-right: 2rem;
+            width: 50%;
+        }
+
+        .bio-text h1 {
+            font-size: 2.5rem;
+        }
+
+        .text {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .bio-text button {
+            padding: 10px;
+            width: 8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: orangered;
+            color: antiquewhite;
+            font-weight: 600;
+        }
+
+        .bio-picture {
+            width: 50%;
+        }
+
+        .bio-picture img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* this is destination container section style sheet */
+
+        .destination-container {
+            margin-top: 4rem;
+        }
+
+
+        .destination-heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .row1 {
+            display: flex;
+        }
+
+        .maldiv {
+            height: auto;
+            width: 49%;
+            margin-right: 1%;
+        }
+
+        .maldiv img {
+            background-size: cover;
+            width: 100%;
+        }
+
+        .indoneshia {
+            height: auto;
+            width: 49%;
+            margin-left: 1%;
+        }
+
+        .indoneshia img {
+            background-size: cover;
+            width: 100%;
+        }
+
+
+        .row2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .srilanka {
+            height: auto;
+            width: auto;
+            /* margin-right: 0.3%; */
+            margin-right: 1%;
+        }
+
+        .srilanka img {
+            background-size: cover;
+            width: 100%;
+        }
+
+        .africa {
+            height: auto;
+            width: auto;
+            /* margin-left: 0.3%; */
+            margin-right: 1%;
+        }
+
+        .africa img {
+            background-size: cover;
+            width: 100%;
+        }
+
+        .kashmir {
+            height: auto;
+            width: auto;
+            /* margin-left: 0.3%; */
+        }
+
+        .kashmir img {
+            background-size: cover;
+            width: 100%;
+        }
+
+
+        .row3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bangladesh {
+            height: auto;
+            width: auto;
+            margin-right: 1%;
+        }
+
+        .bangladesh img {
+            background-size: cover;
+            width: 100%;
+        }
+
+        .bandarban {
+            height: auto;
+            width: auto;
+        }
+
+        .bandarban img {
+            background-size: cover;
+            width: 100%;
+        }
+
+        /* This is choose us section/card section */
+
+        .choose-us-heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-main-row1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .card-row1 {
+            display: flex;
+            width: 80%;
+        }
+
+        .card-row2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .card1 {
+            background-color: rgb(206, 248, 248);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 8px;
+            width: 50%;
+        }
+
+        .card2 {
+            background-color: rgb(255, 234, 220);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 8px;
+            width: 50%;
+        }
+
+        .card3 {
+            background-color: rgb(206, 209, 248);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 8px;
+            width: 40%;
+        }
+
+        /* this is get lost/sample intro section */
+
+        .place {
+            display: flex;
+            justify-content: center;
+        }
+
+        .intro {
+            width: 50%;
+            height: auto;
+            padding: 20px;
+        }
+
+        .intro-bio {
+            color: gray;
+            font-size: 14px;
+        }
+
+        .intro-picture {
+            width: 50%;
+            height: auto;
+            padding: 30px;
+        }
+
+        .intro-picture img {
+            width: 100%;
+        }
+
+
+
+
+
+        /* this is small device responsive style */
+
+        @media screen and (max-width: 600px) {
+
+            /* this is nav and heading container style sheet */
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .n-right {
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .s-input {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 80%;
+            }
+
+            .s-input input {
+                height: 2rem;
+                margin: 5px;
+                width: fit-content;
+            }
+
+            .input {
+                height: 2rem;
+                margin: 5px;
+                width: 30%;
+            }
+
+
+            /* this is bio container section stylesheet */
+
+            .bio-container {
+                flex-direction: column;
+            }
+
+            .bio-text {
+                width: 100%;
+            }
+
+            .bio-picture {
+                margin-top: 5%;
+                width: 100%;
+            }
+
+            /* this is destination container section */
+
+            .row1,
+            .row2,
+            .row3 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .maldiv,
+            .indoneshia,
+            .srilanka,
+            .africa,
+            .kashmir,
+            .bangladesh,
+            .bandarban {
+                width: 100%;
+                margin: 1%;
+            }
+
+            /* this is choose us section/card section  */
+
+            .card-main-row1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+            }
+
+            .card-row1 {
+                padding-left: 0px;
+                margin-left: 0px;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .card-row2 {
+                width: 100%;
+            }
+
+            .card1,
+            .card2 {
+                width: 100%;
+            }
+
+            .card3 {
+                width: 100%;
+            }
+
+            /* this is get lost section/intro section */
+
+            .place {
+                flex-direction: column;
+            }
+
+            .intro {
+                width: 100%;
+                margin: 10px;
+            }
+
+            .intro-picture {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="n-left">
+                <span><img src="travel-luggage.png" width="40px"></span>
+                <span class="web-name">Global <span class="global">Gateway</span></span>
+            </div>
+            <div class="n-right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Package</a></li>
+                    <li><a href="">Testimonial</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="start-container">
+            <div class="slider-text-wrepp">
+                <div class="s-heading">
+                    Explore Your Travel
+                </div>
+                <div class="s-bio">
+                    <p>At Global Gateway, we transform dreams into reality by offering unforgettable travel experiences
+                        tailored to your desires. Whether you crave adventure, relaxation, or cultural exploration,
+                    </p>
+                </div>
+                <div class="btn-container">
+                    <div class="s-input">
+                        <input type="text" placeholder="where go">
+                        <input type="text" placeholder="when">
+                        <input type="text" placeholder="type">
+                        <div class="input">
+                            <img src="magnifier.png" alt="">
+                            Find now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="bio-container">
+            <div class="bio-text">
+                <h1>Our Popular Tour</h1>
+                <div class="text">
+                    <p>Explore breathtaking landscapes, cultural wonders, and unforgettable adventures with our expertly
+                        curated popular tour packages.</p>
+                    <br>
+                    <p>
+                    <ul>
+                        <li>Adventure Getaway: Experience thrilling activities and breathtaking landscapes on an
+                            unforgettable adventure tour.</li>
+                        <br>
+                        <li>Cultural Discovery: Immerse yourself in diverse traditions and historical landmarks on our
+                            cultural exploration tour.</li>
+                        <br>
+                        <li>Luxury Escape: Indulge in relaxation and opulence with our exclusive luxury tour package.
+                        </li>
+                    </ul>
+                    </p>
+                    <br>
+                    <p>Discover the world's wonders through travel: explore diverse cultures, stunning landscapes, and
+                        historical landmarks. Enrich your life with unforgettable experiences and adventures that
+                        broaden your perspective and connect you with global communities.</p>
+                </div>
+                <br>
+                <br>
+                <button>Read More</button>
+            </div>
+            <div class="bio-picture">
+                <img src="bio-heal.png" alt="">
+            </div>
+        </section>
+
+        <section class="destination-container">
+            <div>
+                <div class="destination-heading">
+                    <h1>Choose Your Destination</h1>
+                    <p>Choose your destination and embark on an unforgettable journey filled with adventure and
+                        discovery.</p>
+                </div>
+                <div class="destination-picture">
+                    <div class="row1">
+                        <div class="maldiv">
+                            <img src="maldiv.png" alt="">
+                        </div>
+                        <div class="indoneshia">
+                            <img src="indonesia.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="srilanka">
+                            <img src="srilanka.png" alt="">
+                        </div>
+                        <div class="africa">
+                            <img src="africa.png" alt="">
+                        </div>
+                        <div class="kashmir">
+                            <img src="kashmir.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row3">
+                        <div class="bangladesh">
+                            <img src="bangladesh.png" alt="">
+                        </div>
+                        <div class="bandarban">
+                            <img src="bandarban.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="choose-us">
+            <div class="choose-us-heading">
+                <h1>Why Choose Us</h1>
+                <p>Experience hassle-free travel planning, expert guidance, exclusive deals, and memories that last a
+                    lifetime when you choose our dedicated team</p>
+            </div>
+            <div class="card-container">
+                <div class="card-main-row1">
+                    <div class="card-row1">
+                        <div class="card1">
+                            <img src="hotel.png" alt="">
+                            <h1>Handpicked Hotels</h1>
+                            <p>Discover our handpicked hotels, where luxury meets comfort. Enjoy personalized
+                                experiences, stunning locations, and exceptional service for your perfect getaway.</p>
+                        </div>
+                        <div class="card2">
+                            <img src="gps.png" alt="">
+                            <h1>
+                                World Classic Service
+                            </h1>
+                            <p>World Classic Service offers exceptional travel experiences, providing personalized
+                                itineraries and unforgettable adventures across the globe for discerning travelers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-row2">
+                    <div class="card3">
+                        <img src="coupon.png" alt="">
+                        <h1>Best Prize Guarantee</h1>
+                        <p>With our Best Price Guarantee, book with confidence knowing you'll get the lowest prices on
+                            all your travel needs.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="place">
+            <div class="intro">
+                <h1>A Simple Perfect Place To Get Lost</h1>
+                <p class="intro-bio">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae cum quidem
+                    eius nesciunt, at beatae voluptatibus, explicabo dolore cumque obcaecati enim natus! Eligendi facere
+                    Fipsa laboriosam debitis odio fugit laudantium.</p>
+                <br>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita laboriosam nemo, odit corrupti
+                        libero excepturi possimus et dolorem dolore molestiae.</li>
+                    <br>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vero reprehenderit perspiciatis
+                        nisi quibusdam iusto odio harum consequatur nihil eos?</li>
+                </ul>
+            </div>
+            <div class="intro-picture">
+                <img src="getpic.png" alt="">
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

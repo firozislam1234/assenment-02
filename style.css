@@ -1,0 +1,99 @@
+*{margin:0; padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* shared style */
+body{
+    font-family: "Work Sans", sans-serif;
+}
+.tomato-primary{
+    color: #ff5400;
+}
+.gray-primary{
+    color:#5A5A5D;
+}
+.btn-primary{
+    padding: 0.5rem 1.50rem;
+    border: none;
+    font-size: 1.20rem;
+    font-weight: 500;
+    background-color: #ff5400;
+    border-radius: 6px;
+    color: white;
+}
+
+/* nav manu style */
+header{
+    width: 100%;
+    padding: 3.12rem 0.5rem;
+}
+nav .nav-title{
+    font-size: 2rem;
+    display: flex;
+    
+}
+header nav{
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    margin: 0 auto;
+}
+.nav-manu{
+    font-size: 1.20rem;
+}
+.nav-manu ul{
+    display: flex;
+    gap:1.25rem
+}
+.nav-manu ul li{
+    list-style: none;
+}
+.nav-manu ul li a{
+    text-decoration: none;
+}
+.toggel{
+    display: none;
+}
+/* slider style */
+.slider{
+    width: 100%;
+    background-image:url(Images/Group\ 13\ \(1\)\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    max-width: 1170px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+.slider-text-wrepp{
+    max-width: 800px;
+}
+.slider-text .slider-tittle{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.slider-text .slider-documentation{
+    color:white;
+    margin-bottom: 40px;
+}
+.slider-text{
+    max-width: 800px;
+    margin: auto;
+    padding: 155px 20px;
+}
+.slider-button{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    margin: auto;
+    gap: 20px;
+}
+.slider-button input, select{
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
